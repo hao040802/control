@@ -19,15 +19,10 @@
       <button onclick="sendCommand('left')">TRAI</button>
       <button onclick="sendCommand('stop')">DUNG</button>
       <button onclick="sendCommand('right')">PHAI</button><br>
-      <button onclick="sendCommand('backward')">LUI</button><br>
-      <!-- Thêm nút dừng mềm và dừng khẩn cấp -->
-      <button onclick="sendCommand('softstop')">Dung mem</button>
-      <button onclick="sendCommand('Emergencystop')">Dung khan cap</button>
-      <button onclick="sendCommand('SoftStart')">Khoi dong mem</button>
     </div>
     <script>
       function sendCommand(command) {
-  fetch('http://192.168.1.17/' + command);
+  fetch('http://192.168.1.13/' + command);
       }
     </script>
   </body>
