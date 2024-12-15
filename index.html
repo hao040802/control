@@ -1,0 +1,35 @@
+String html = R"rawliteral(
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Điều khiển xe</title>
+    <style>
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Dieu khien xe</h1>
+    <div style="text-align: center;">
+
+      <button onclick="sendCommand('forward')">TIEN</button><br>
+      <button onclick="sendCommand('left')">TRAI</button>
+      <button onclick="sendCommand('stop')">DUNG</button>
+      <button onclick="sendCommand('right')">PHAI</button><br>
+      <button onclick="sendCommand('backward')">LUI</button><br>
+      <!-- Thêm nút dừng mềm và dừng khẩn cấp -->
+      <button onclick="sendCommand('softstop')">Dung mem</button>
+      <button onclick="sendCommand('Emergencystop')">Dung khan cap</button>
+      <button onclick="sendCommand('SoftStart')">Khoi dong mem</button>
+    </div>
+    <script>
+      function sendCommand(command) {
+        fetch('/' + command);
+      }
+    </script>
+  </body>
+  </html>
